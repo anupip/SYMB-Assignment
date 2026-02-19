@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { MessagePanel } from './components/MessagePanel';
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:4000/api';
+// Prefer environment variable for flexibility; fall back to deployed Render URL
+const API_BASE =
+  import.meta.env.VITE_API_BASE || 'https://symb-assignment-gm3t.onrender.com/api';
 
 function App() {
   const [accounts, setAccounts] = useState([]);
